@@ -20,6 +20,7 @@ public class Send {
         String msg = "商品 .....";
 
         channel.basicPublish(EXCHANGE_NAME,"goods.delete",null,msg.getBytes());
+//        channel.basicPublish(EXCHANGE_NAME,"goods.add",null,msg.getBytes());
         System.out.println("-----send "+msg);
 
         channel.close();

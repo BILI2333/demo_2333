@@ -1,5 +1,12 @@
 package com.mar.myrabbitmq.confirm;
-
+/**
+ * create by: Orange
+ * description: 批量模式
+ * create time: 2021/2/20 15:39
+ * * @Param: null
+ *
+ * @return
+ */
 import com.mar.myrabbitmq.util.ConnectionUtils;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

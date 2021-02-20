@@ -18,7 +18,7 @@ public class TxSend {
         String msg = "hello tx message";
 
         try {
-            channel.txSelect();
+            channel.txSelect();//将当前channel设置成transation
             channel.basicPublish("",QUEUE_NAME,null,msg.getBytes());
             /*
             错误代码，会造成事务回滚
@@ -27,7 +27,7 @@ public class TxSend {
             System.out.println("send "+msg);
             channel.txCommit();
         }catch (Exception e){
-            channel.txRollback();
+            channel.txRollback();//事务回滚
             System.out.println(" send message rollback!");
         }
 
